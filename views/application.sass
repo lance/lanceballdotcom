@@ -1,0 +1,77 @@
+!bgcolor = #CBC6B3
+!color = #331100
+!headings = #443322
+!box = #cc9966
+!alt = #777744
+!footer = #555544
+!border = #998877
+!title = #555555
+
+body
+  :background-color = !bgcolor
+  :color = !color
+  :font-size 1em
+
+h1, h2, h3, h4
+  :color = !headings
+  
+h2
+  :color = !alt
+  :border-bottom = 1px solid !border
+
+hr
+  :background-color = !border
+
+a
+  :color = !alt
+  
+li
+  :list-style none
+  :font-size 1.1em
+  :line-height 1em
+  :margin-left -1em
+  :margin-bottom 1.2em
+
+#header, #footer
+  ul
+    :margin 0
+    li
+      :display inline
+      :margin 0 1ex 0 0
+      :padding-right 1em
+      :font-size 1.2em
+      :font-weight bold
+      :vertical-align baseline
+      a
+        :text-decoration none
+
+#header
+  :padding-top 2em
+  #title
+    h1
+      :color = !title
+      :float right
+      :font-size 7em
+      :font-weight bold
+      :letter-spacing -0.1em
+      :line-height 1em
+      :overflow hidden
+      :padding 0
+      :margin 0
+  
+#footer
+  :color !footer
+  :margin-top 1em
+  :font-size .9em
+  
+.rightborder
+  :border-right= 1px solid !border
+  :padding-right 10px
+  :margin-bottom 1em
+  
+.box
+  :background-color = !box
+  
+.alt
+  :color = !alt
+  

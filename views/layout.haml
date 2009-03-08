@@ -1,0 +1,37 @@
+!!!
+
+%html{:xmlns=>"http://www.w3.org/1999/xhtml", 'xml:lang'=>"en", :lang=>"en"}
+
+  %head
+    %title Lance Ball
+    = stylesheet_link_tag 'screen'
+    /[if IE]
+      = stylesheet_link_tag 'ie', :media => 'screen'
+    = stylesheet_link_tag 'fancy-type', 'application'
+  
+  %body
+    .container
+      #header
+        #navigation.container
+          %ul
+            %li= link_to_unless_current 'Home', :url => '/'
+            %li= link_to_unless_current 'Bio', :url => '/bio'
+            %li= link_to_unless_current 'Contact', :url => '/contact'
+        
+        #title.span-24.last
+          %h1 Lance Ball
+        %hr
+      #content
+        = yield
+      #footer
+        %hr
+        %ul
+          %li= link_to_unless_current 'Code', :url => 'http://github.com/lance'
+          %li= link_to 'Blog', :url => 'http://lanceball.com'
+          %li= link_to 'Twitter', :url => 'http://twitter.com/lanceball'
+          %li= link_to 'Facebook', :url => 'http://www.facebook.com/home.php#/profile.php?id=625278317'
+          %li= link_to 'LinkedIn', :url => 'http://www.linkedin.com/in/lanceball'
+          %li= link_to 'Music', :url => 'http://last.fm/user/lanceball'
+          %li= link_to 'Photos', :url => 'http://flickr.com/photos/skimcoat/'
+          %li= link_to 'Yoga', :url => 'http://practice.lanceball.com'
+          %li= link_to 'Coworking', :url => 'http://locomotivity.com'
