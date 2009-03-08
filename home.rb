@@ -2,9 +2,14 @@ require 'rubygems'
 require 'sinatra'
 require 'helpers'
 require 'haml'
+require 'config/environment'
 
 get '/' do
   haml :home
+end
+
+get '/post/*' do
+  redirect 'http://lanceball.com/post/' + params[:splat].join('/')
 end
 
 get '/:page' do |page|

@@ -5,7 +5,8 @@
 !footer = #555544
 !border = #998877
 !title = #555555
-!box = !border
+!box = !alt + 80
+!link = #500
 
 body
   :background-color = !bgcolor
@@ -23,7 +24,7 @@ hr
   :background-color = !border
 
 a
-  :color = !alt
+  :color = !link
   :text-decoration none
   
 li
@@ -62,7 +63,13 @@ li
   :color !footer
   :margin-top 1em
   :font-size .9em
-  
+
+#bio.box
+  :background-color = #D9D1B4
+
+#contact-form
+  :margin-bottom 2em
+
 .rightborder
   :border-right= 1px solid !border
   :padding-right 10px
@@ -77,6 +84,11 @@ li
 .work
   :padding 1em 0 0 1em
   :margin .5ex
+  .box
+    :border = 1px solid !border
+    :padding-bottom 2em
+    a
+      :color = !link  
 
 .services
   a
