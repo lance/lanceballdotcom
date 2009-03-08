@@ -1,16 +1,16 @@
 !bgcolor = #CBC6B3
 !color = #331100
 !headings = #443322
-!box = #cc9966
 !alt = #777744
 !footer = #555544
 !border = #998877
 !title = #555555
+!box = !border
 
 body
   :background-color = !bgcolor
   :color = !color
-  :font-size 1em
+  :font-size .9em
 
 h1, h2, h3, h4
   :color = !headings
@@ -24,11 +24,12 @@ hr
 
 a
   :color = !alt
+  :text-decoration none
   
 li
   :list-style none
   :font-size 1.1em
-  :line-height 1em
+  :line-height 1.1em
   :margin-left -1em
   :margin-bottom 1.2em
 
@@ -42,8 +43,6 @@ li
       :font-size 1.2em
       :font-weight bold
       :vertical-align baseline
-      a
-        :text-decoration none
 
 #header
   :padding-top 2em
@@ -74,4 +73,13 @@ li
   
 .alt
   :color = !alt
-  
+
+.work
+  :padding 1em 0 0 1em
+  :margin .5ex
+
+.services
+  a
+    :color = !color
+  a:hover
+    :text-decoration underline

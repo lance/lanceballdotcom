@@ -1,30 +1,129 @@
 .span-7.rightborder
   %h2 Services
   %ul
-    %li Website Design & Development
-    %li Content Management System Creation & Deployment
-    %li Database Development & Optimization
+    %li Website Design &amp; Development
+    %li Content Management System Creation &amp; Deployment
+    %li Database Development &amp; Optimization
     %li Custom Software Development
-    %li Website & Email Hosting
+    %li Website &amp; Email Hosting
     %li Google Applications for Business
 
 .span-7.rightborder
   %h2 How It's Done
   %ul.services
-    %li Ruby & Rails
-    %li Javascript & AJAX
+    %li Ruby &amp; Rails
+    %li Javascript &amp; AJAX
     %li Radiant CMS
     %li Sinatra
     %li PHP Development
     %li XHTML/HTML &amp; CSS
-    %li HAML & SASS
+    %li HAML &amp; SASS
 
 .span-7.last
   %h2 Recent Work
   %ul.services
-    %li Appalachian Sustainable Agriculture Project
-    %li Genova Diagnostics
-    %li Blue Ridge Bone & Joint
-    %li Top Floor Studio
-    %li The Puckett Institute
-    %li Greenthumbr.com
+    %li 
+      <a href="#" title="Appalachian Sustainable Agriculture Project" onclick="$('asap').removeClassName('hide');">Appalachian Sustainable Agriculture Project</a>
+      #asap.hide.work
+        %p.box.small
+          %strong Client:
+          = link_to 'ASAP', :url => 'http://buyappalachian.org' 
+          %br
+          %strong Services: 
+          Development 
+          %br
+          %strong Technology: 
+          PHP, Prototype, MySQL 
+          %br
+          %a.small{:href=>'#', :onclick=>'$("asap").addClassName("hide")', :style=>'float:right'} Close
+    
+    %li 
+      <a href="#" title="Locomotivity" onclick="$('locomo').removeClassName('hide');">Locomotivity</a>
+      #locomo.hide.work
+        %p.box.small
+          %strong Client:
+          = link_to 'Internal', :url => 'http://locomotivity.com' 
+          %br
+          %strong Services: 
+          Development 
+          %br
+          %strong Technology: 
+          Ruby, Radiant CMS, Prototype, PostgreSQL
+          %br
+          %a.small{:href=>'#', :onclick=>'$("locomo").addClassName("hide")', :style=>'float:right'} Close
+    
+    %li 
+      <a href="#" onclick="$('genova').removeClassName('hide');">Genova Diagnostics</a>
+      #genova.hide.work
+        %p.box.small
+          %strong Client:
+          = link_to 'Top Floor Studio', :url => 'http://topfloorstudio.com' 
+          %br
+          %strong Services: 
+          Development 
+          %br
+          %strong Technology: 
+          PHP, JQuery, MySQL 
+          %br
+          %a.small{:href=>'#', :onclick=>'$("genova").addClassName("hide")', :style=>'float:right'} Close
+
+    %li 
+      <a href="#" onclick="$('esc').removeClassName('hide');">Electric Sheep Company</a>
+      #esc.hide.work
+        %p.box.small
+          %strong Client:
+          = link_to 'Electric Sheep Company', :url => 'http://electricsheepcompany.com' 
+          %br
+          %strong Services: 
+          Development 
+          %br
+          %strong Technology: 
+          Ruby, Rails, Prototype, XHMTL, CSS, MySQL 
+          %br
+          %a.small{:href=>'#', :onclick=>'$("esc").addClassName("hide")', :style=>'float:right'} Close
+
+    %li 
+      <a href="#" onclick="$('brbj').removeClassName('hide');">Blue Ridge Bone &amp; Joint</a>
+      #brbj.hide.work
+        %p.box.small
+          %strong Client:
+          = link_to 'Asheville Technologies', :url => 'http://ashevilletechnologies.com' 
+          %br
+          %strong Services: 
+          Development 
+          %br
+          %strong Technology: 
+          PHP, Javascript, XHMTL, CSS
+          %br
+          %a.small{:href=>'#', :onclick=>'$("brbj").addClassName("hide")', :style=>'float:right'} Close
+
+    %li 
+      <a href="#" onclick="$('tfs').removeClassName('hide');">Top Floor Studio</a>
+      #tfs.hide.work
+        %p.box.small
+          %strong Client:
+          = link_to 'Top Floor Studio', :url => 'http://topfloorstudio.com' 
+          %br
+          %strong Services: 
+          Development 
+          %br
+          %strong Technology: 
+          PHP, Javascript, XHMTL, CSS
+          %br
+          %a.small{:href=>'#', :onclick=>'$("tfs").addClassName("hide")', :style=>'float:right'} Close
+
+    %li 
+      <a href="#" onclick="$('puckett').removeClassName('hide');">The Puckett Institute</a>
+      #puckett.hide.work
+        %p.box.small
+          %strong Client:
+          = link_to 'Asheville Technologies', :url => 'http://ashevilletechnologies.com' 
+          %br
+          %strong Services: 
+          Development 
+          %br
+          %strong Technology: 
+          PHP, Javascript, XHMTL, CSS
+          %br
+          %a.small{:href=>'#', :onclick=>'$("puckett").addClassName("hide")', :style=>'float:right'} Close
+
