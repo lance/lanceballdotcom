@@ -10,6 +10,10 @@ get '/' do
   haml :home
 end
 
+get '/post/*' do
+  redirect 'http://blog.lanceball.com/post/' + params[:splat].join('/')
+end
+
 get '/contact' do
   @contact = Contact.new
   haml :contact
