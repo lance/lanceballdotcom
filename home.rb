@@ -5,7 +5,6 @@ require File.expand_path(File.dirname(__FILE__) + '/lib/authorization')
 require File.expand_path(File.dirname(__FILE__) + '/models/contact')
 require File.expand_path(File.dirname(__FILE__) + '/helpers')
 
-
 get '/' do
   haml :home
 end

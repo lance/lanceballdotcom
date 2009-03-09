@@ -1,3 +1,5 @@
+require 'md5'
+
 module Sinatra
   module Authorization
  
@@ -6,7 +8,7 @@ module Sinatra
   end
  
   def unauthorized!(realm="myApp.com")
-    header 'WWW-Authenticate' => %(Basic realm="#{realm}")
+    headers 'WWW-Authenticate' => %(Basic realm="#{realm}")
     throw :halt, [ 401, 'Authorization Required' ]
   end
  
@@ -19,7 +21,8 @@ module Sinatra
   end
  
   def authorize(username, password)
-    return username == 'lance' && password == 'caseyjones'
+    @authorization = YAML.load(File.read(File.expand_path(File.dirname(__FILE__) + '/../config/authorization.yml')))
+    return !@authorization.blank? && @authorization[username]['password'] == MD5.new(password).to_s
   end
  
   def require_admin
