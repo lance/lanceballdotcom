@@ -1,0 +1,5 @@
+development:
+  adapter: sqlite3
+  database: db/lanceballdotcom.sqlite3.db
+  pool: 5
+  timeout: 5000

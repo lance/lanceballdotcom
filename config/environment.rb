@@ -2,8 +2,6 @@ require 'activerecord'
 require 'activesupport'
 require 'models/contact'
 
-ActiveRecord::Base.establish_connection(
-  :adapter => 'sqlite3',
-  :dbfile =>  'db/lanceballdotcom.sqlite3.db'
-)
+dbconfig = YAML.load(File.read('config/database.yml'))
+ActiveRecord::Base.establish_connection dbconfig['production']
 
