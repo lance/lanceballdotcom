@@ -7,6 +7,7 @@ module Helpers
   
   module ClassMethods
     helpers do
+      include Sinatra::Authorization      
       
       def link_to_unless_current(label, options={}) 
         return label if request.env['REQUEST_URI'] == options[:url]
