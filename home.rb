@@ -1,8 +1,8 @@
 require 'rubygems'
 require 'sinatra'
-require 'helpers'
-require 'haml'
-require 'config/environment'
+require File.expand_path(File.dirname(__FILE__) + '/lib/config')
+require File.expand_path(File.dirname(__FILE__) + '/models/contact')
+require File.expand_path(File.dirname(__FILE__) + '/helpers')
 
 
 get '/' do
@@ -21,6 +21,7 @@ end
 post '/contact' do
   @contact = Contact.new(params['contact'])
   if (@contact.save)
+    @contact = Contact.new
     @notice = "I got the message - thanks! I'll contact you shortly."
   end
   haml :contact

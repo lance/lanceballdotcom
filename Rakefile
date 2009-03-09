@@ -1,7 +1,7 @@
 
 desc "Setup the environment"
   task :environment do
-    require('config/environment')
+    require('lib/config')
 end
 
 namespace :db do
