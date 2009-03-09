@@ -12,7 +12,7 @@
       %p
         %label{:for=>'message'} Message:
         %br
-        %textarea.span-8{:id=>'message', :name=>'contact[message]'}
+        %textarea.span-8{:id=>'message', :name=>'contact[message]', :rows=>'30', :cols=>'20'}
           = @contact.message
       %p
         %input{:type=>'submit', :value=>'Submit'}
@@ -29,5 +29,6 @@
       If you need a site designed and developed from scratch, help with database optimization, new functionality or additional work on an existing site, architectural and usability issues, or simple email or website hosting, I'm here to help.  
     %p 
       Let me know what you need in your message. Please allow 1 week for a response.  
-    %br Thanks!
-    %br Lance
+    Thanks!
+    %br 
+    Lance
