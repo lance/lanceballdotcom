@@ -11,7 +11,7 @@ get '/' do
 end
 
 get '/post/*' do
-  redirect 'http://lanceball.com/post/' + params[:splat].join('/')
+  redirect 'http://blog.lanceball.com/post/' + params[:splat].join('/')
 end
 
 get '/contact' do
