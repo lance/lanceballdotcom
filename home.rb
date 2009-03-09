@@ -27,6 +27,17 @@ post '/contact' do
   haml :contact
 end
 
+delete '/contact' do
+  @contact = Contact.find(params['contact']['id'])
+  unless @contact
+    'Not found'
+    return
+  end
+  @contact.destroy
+  @contacts = Contact.find(:all)
+  haml :contacts
+end
+
 get '/contacts' do
   if require_admin
     @contacts = Contact.find(:all)
