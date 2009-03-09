@@ -36,3 +36,9 @@
           %li= link_to 'Yoga', :url => 'http://practice.lanceball.com'
           %li= link_to 'Facebook', :url => 'http://www.facebook.com/home.php/profile.php?id=625278317'
           %li= link_to 'Twitter', :url => 'http://twitter.com/lanceball'
+    %script{:type=>"text/javascript"}
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    %script{:type=>"text/javascript"}
+      var pageTracker = _gat._getTracker("UA-373972-2");
+      pageTracker._trackPageview();
