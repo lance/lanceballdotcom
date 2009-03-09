@@ -1,28 +1,33 @@
 #contact
   #contact-form.span-10.prepend-2.rightborder
-    %form
+    %form{:action=>'/contact', :method=>'post'}
       %p
         %label{:for=>'name'} Name:
         %br
-        %input.span-8.title{:type=>'text', :id=>'name'}
-      %p
-        %label{:for=>'title'} Title:
-        %br
-        %input.span-8.text{:type=>'text', :id=>'title'}
+        %input.span-8.title{:type=>'text', :id=>'name', :name=>'contact[name]', :value=>"#{@contact.name}"}
       %p
         %label{:for=>'email'} Email:
         %br
-        %input.span-8.text{:type=>'text', :id=>'email'}
+        %input.span-8.text{:type=>'text', :id=>'email', :name=>'contact[email]', :value=>"#{@contact.email}"}
       %p
         %label{:for=>'message'} Message:
         %br
-        %textarea.span-8{:id=>'message'}
+        %textarea.span-8{:id=>'message', :name=>'contact[message]'}
+          = @contact.message
       %p
         %input{:type=>'submit', :value=>'Submit'}
   .span-10.last.b
+    %h2 Contact Me
+    - if @notice
+      .success= @notice
+    - unless @contact.errors.empty?
+      .error
+        %h3 There was a problem
+        - @contact.errors.each_full do |msg|
+          = "#{msg}<br/>"
     %p
       If you need a site designed and developed from scratch, help with database optimization, new functionality or additional work on an existing site, architectural and usability issues, or simple email or website hosting, I'm here to help.  
     %p 
-      Fill out the form on the left. Please allow 1 week for a response.  
+      Let me know what you need in your message. Please allow 1 week for a response.  
     %br Thanks!
     %br Lance

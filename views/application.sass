@@ -26,6 +26,8 @@ hr
 a
   :color = !link
   :text-decoration none
+a:hover
+  :text-decoration underline
   
 li
   :list-style none
@@ -61,11 +63,16 @@ li
   
 #footer
   :color !footer
-  :margin-top 1em
+  :margin 1em 0
   :font-size .9em
 
-#bio.box
-  :background-color = #D9D1B4
+#bio
+  :border-right = 1px solid !border
+  :border-left = 1px solid !border
+  :padding 1em 3em
+  :margin 2em 1em
+  a
+    :text-decoration underline
 
 #contact-form
   :margin-bottom 2em
@@ -90,8 +97,3 @@ li
     a
       :color = !link  
 
-.services
-  a
-    :color = !color
-  a:hover
-    :text-decoration underline

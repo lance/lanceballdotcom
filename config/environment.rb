@@ -1,4 +1,5 @@
 require 'activerecord'
+require 'activesupport'
 require 'models/contact'
 
 ActiveRecord::Base.establish_connection(
