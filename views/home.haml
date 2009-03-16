@@ -23,7 +23,7 @@
   %h2 Recent Work
   %ul.services
     %li 
-      <a href="#" title="Appalachian Sustainable Agriculture Project" onclick="$('asap').removeClassName('hide');">Appalachian Sustainable Agriculture Project</a>
+      <a href="#" title="Appalachian Sustainable Agriculture Project" onclick="Element.toggleClassName('asap', 'hide');return false;">Appalachian Sustainable Agriculture Project</a>
       #asap.hide.work
         %p.box.small
           %strong Client:
@@ -38,7 +38,7 @@
           %a.small{:href=>'#', :onclick=>'$("asap").addClassName("hide")', :style=>'float:right'} Close
     
     %li 
-      <a href="#" title="Locomotivity" onclick="$('locomo').removeClassName('hide');">Locomotivity</a>
+      <a href="#" title="Locomotivity" onclick="Element.toggleClassName('locomo', 'hide');">Locomotivity</a>
       #locomo.hide.work
         %p.box.small
           %strong Client:
@@ -53,7 +53,7 @@
           %a.small{:href=>'#', :onclick=>'$("locomo").addClassName("hide")', :style=>'float:right'} Close
     
     %li 
-      <a href="#" onclick="$('genova').removeClassName('hide');">Genova Diagnostics</a>
+      <a href="#" onclick="Element.toggleClassName('genova', 'hide');">Genova Diagnostics</a>
       #genova.hide.work
         %p.box.small
           %strong Client:
@@ -68,7 +68,7 @@
           %a.small{:href=>'#', :onclick=>'$("genova").addClassName("hide")', :style=>'float:right'} Close
 
     %li 
-      <a href="#" onclick="$('esc').removeClassName('hide');">Electric Sheep Company</a>
+      <a href="#" onclick="Element.toggleClassName('esc', 'hide');">Electric Sheep Company</a>
       #esc.hide.work
         %p.box.small
           %strong Client:
@@ -83,7 +83,7 @@
           %a.small{:href=>'#', :onclick=>'$("esc").addClassName("hide")', :style=>'float:right'} Close
 
     %li 
-      <a href="#" onclick="$('brbj').removeClassName('hide');">Blue Ridge Bone &amp; Joint</a>
+      <a href="#" onclick="Element.toggleClassName('brbj', 'hide');">Blue Ridge Bone &amp; Joint</a>
       #brbj.hide.work
         %p.box.small
           %strong Client:
@@ -98,7 +98,7 @@
           %a.small{:href=>'#', :onclick=>'$("brbj").addClassName("hide")', :style=>'float:right'} Close
 
     %li 
-      <a href="#" onclick="$('tfs').removeClassName('hide');">Top Floor Studio</a>
+      <a href="#" onclick="Element.toggleClassName('tfs', 'hide');">Top Floor Studio</a>
       #tfs.hide.work
         %p.box.small
           %strong Client:
@@ -113,7 +113,7 @@
           %a.small{:href=>'#', :onclick=>'$("tfs").addClassName("hide")', :style=>'float:right'} Close
 
     %li 
-      <a href="#" onclick="$('puckett').removeClassName('hide');">The Puckett Institute</a>
+      <a href="#" onclick="Element.toggleClassName('puckett', 'hide');">The Puckett Institute</a>
       #puckett.hide.work
         %p.box.small
           %strong Client:

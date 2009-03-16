@@ -12,3 +12,4 @@ namespace :db do
     ActiveRecord::Migrator.migrate("db/migrate")
   end
 end
+
