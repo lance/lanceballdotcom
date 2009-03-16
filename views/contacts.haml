@@ -1,12 +1,13 @@
 #contacts
   - @contacts.each do |contact|
-    .span-24
+    .span-24.contact
       .span-2.rightborder
         %form{:method=>"post", :action=>"/contact"}
           %input{:type=>"hidden", :name=>"_method", :value=>"delete"}
           %input{:type=>"hidden", :name=>"contact[id]", :id=>'id', :value=>"#{contact.id}"}
           .submit
             %button{:type=>"submit", :onclick=>'javascript:alert("Are you sure?");return true;'}Delete
-      .span-4.rightborder= contact.name
+      .span-2.rightborder= format_date(contact.created_at)
+      .span-3.rightborder= contact.name
       .span-4.rightborder= contact.email
-      .span-13.last= contact.message
+      .span-10.last= contact.message

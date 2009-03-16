@@ -1,3 +1,4 @@
+
 module Helpers
   class << self
     def included(base)
@@ -8,6 +9,10 @@ module Helpers
   module ClassMethods
     helpers do
       include Sinatra::Authorization      
+      
+      def format_date(date)
+        date.blank? ? "&nbsp;" : date.strftime("%m-%d-%y")
+      end
       
       def link_to_unless_current(label, options={}) 
         return label if request.env['REQUEST_URI'] == options[:url]
